@@ -1,5 +1,5 @@
 {
-  "name": "@copilotkit/react-core",
+  "name": "@scoutqa/react-core",
   "private": false,
   "homepage": "https://github.com/CopilotKit/CopilotKit",
   "repository": {
@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.10.6",
+  "version": "1.10.6-fork.1",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

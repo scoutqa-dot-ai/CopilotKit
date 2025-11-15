@@ -82,15 +82,12 @@ import {
 // Create a type that excludes message-related properties from the internal type
 export type UseCopilotChatReturn = Omit<
   UseCopilotChatReturnInternal,
-  | "messages"
-  | "sendMessage"
   | "suggestions"
   | "setSuggestions"
   | "generateSuggestions"
   | "isLoadingSuggestions"
   | "resetSuggestions"
   | "interrupt"
-  | "setMessages"
   | "deleteMessage"
 >;
 
@@ -111,6 +108,9 @@ export function useCopilotChat(options: UseCopilotChatOptions = {}): UseCopilotC
     runChatCompletion,
     mcpServers,
     setMcpServers,
+    messages,
+    sendMessage,
+    setMessages,
   } = useCopilotChatInternal(options);
 
   return {
@@ -123,5 +123,8 @@ export function useCopilotChat(options: UseCopilotChatOptions = {}): UseCopilotC
     runChatCompletion,
     mcpServers,
     setMcpServers,
+    messages,
+    sendMessage,
+    setMessages,
   };
 }
