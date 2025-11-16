@@ -265,6 +265,9 @@ export function CopilotMessages({ children }: { children: ReactNode }) {
     const fetchMessages = async () => {
       if (!agentSession?.agentName) return;
 
+      // we do our own fetch
+      if (agentSession?.agentName === "orchestratorAgent") return;
+
       const result = await runtimeClient.loadAgentState({
         threadId,
         agentName: agentSession?.agentName,
